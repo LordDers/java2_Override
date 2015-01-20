@@ -32,4 +32,10 @@ public class Persona {
 		
 		return sueldo;
 	}
+	
+	public void mostrarDatos () {
+		
+		System.out.println("\n--- Datos ---");
+		System.out.print("Nombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad);
+	}
 }

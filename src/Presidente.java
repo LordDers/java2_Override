@@ -17,13 +17,15 @@ public class Presidente extends Persona {
 		
 		return numVotos;
 	}
-	
-	public void datosPresidente () {
+
+	@Override
+	public void mostrarDatos () {
 		
-		System.out.println("\n--- Datos Presidente ---");
+		super.mostrarDatos();
+		/*System.out.println("\n--- Datos Presidente ---");
 		System.out.print("Nombre: " + nombre);
 		System.out.print("\nApelido: " + apellido);
-		System.out.print("\nEdad: " + edad);
+		System.out.print("\nEdad: " + edad);*/
 		System.out.print("\nNúmero de votos obtenidos: " + numVotos);
 	}
 }

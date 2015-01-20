@@ -41,8 +41,9 @@ public class Futbolista extends Persona {
 		
 		return seleccion;
 	}
-	
-	public void datosFutbolista () {
+
+	@Override
+	public void mostrarDatos () {
 		
 		System.out.println("\n--- Datos Futbolista ---");
 		System.out.print("Nombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad);

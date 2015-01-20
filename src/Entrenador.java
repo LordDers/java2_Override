@@ -41,8 +41,9 @@ public class Entrenador extends Persona {
 		
 		return numAyudantes;
 	}
-	
-	public void datosEntrenador () {
+
+	@Override
+	public void mostrarDatos () {
 		
 		System.out.println("\n--- Datos Entrenador ---");
 		System.out.print("Nombre: " + nombre);

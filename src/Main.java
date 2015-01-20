@@ -6,10 +6,6 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner (System.in);
-		
-		Hashtable <String, String> personasFutbolistas = new Hashtable <String, String> ();
-		personasFutbolistas.put("Pepe", "Real Madrid");
-		personasFutbolistas.put("Ruben", "Real Sociedad");
 				
 		System.out.println("Elige una opción: Futbolista(F), Entrenador(E) o Presidente(P)");
 		char opcion = sc.next().charAt(0);
@@ -44,9 +40,8 @@ public class Main {
 				else {
 					futbolista.setSeleccion(false);
 				}
-			
-				futbolista.datosFutbolista();
-				personasFutbolistas.put(nombre, futbolista.getClub());
+
+				futbolista.mostrarDatos();
 			}
 			
 			if (opcion == 'E' || opcion == 'e') {
@@ -60,7 +55,7 @@ public class Main {
 				System.out.print("Número de Ayudantes: ");
 				entrenador.setNumAyudantes(sc.nextInt());
 
-				entrenador.datosEntrenador();
+				entrenador.mostrarDatos();
 			} 
 			
 			if (opcion == 'P' || opcion == 'p') {
@@ -70,17 +65,7 @@ public class Main {
 				System.out.print("Número de votos: ");
 				presidente.setNumVotos(sc.nextInt());
 
-				presidente.datosPresidente();
-			}
-			
-			System.out.println("\nSelecciona un nombre para ver su club: "  + personasFutbolistas.keySet());
-			String selecNombre = sc.next();
-			
-			if (personasFutbolistas.containsKey(selecNombre)) {
-				System.out.println("Club: " + personasFutbolistas.get(selecNombre));
-			}
-			else {
-				System.out.println("El nombre seleccionado no está disponible");
+				presidente.mostrarDatos();
 			}
 		}
 		else {
